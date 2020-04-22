@@ -1,0 +1,95 @@
+.wrapper
+  .new-header
+    %h1.new-header__icon
+
+    %nav.new-header__bar
+      %ol.new-header__bar__box
+        %li.new-header__bar__box__active
+          .new-header__bar__box__active__text
+            会員情報
+          .new-header__bar__box__active__bars
+
+        %li.new-header__bar__box__active
+          .new-header__bar__box__active__text
+            電話番号認証
+          .new-header__bar__box__active__bars
+
+        %li.new-header__bar__box__active
+          .new-header__bar__box__active__text
+            完了
+          .new-header__bar__box__active__bars
+
+  .new
+    .new__main
+      .new__main__top
+        %h2 会員情報入力
+
+      .new__main__middle
+        .new__main__middle__center
+        
+          .new__main__middle__center__form-group
+            .new__main__middle__center__form-group__line
+              %label ニックネーム
+              %span 必須
+            .input
+
+          .new__main__middle__center__form-group
+            .new__main__middle__center__form-group__line
+              %label メールアドレス
+              %span 必須
+            .input
+
+          .new__main__middle__center__form-password
+            .new__main__middle__center__form-password__line
+              %label パスワード
+              %span 必須
+            .input
+
+            %p ※英字と数字の両方を含めて設定してください。
+
+            .cheak-box
+              .cheak-box__icon
+                %i
+              .cheak-box__label
+
+          .new__main__middle__center__form-group
+            %h3.name 本人確認
+            %p.text 安心安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまには公開されることはありません。
+
+          .new__main__middle__center__form-group
+            .new__main__middle__center__form-group__line
+              %label お名前（全角）
+              %span 必須
+            .input
+            .input-half
+
+          .new__main__middle__center__form-group
+            .new__main__middle__center__form-group__line
+              %label お名前カナ（全角）
+              %span 必須
+            .input
+            .input-half
+
+          .new__main__middle__center__form-group
+            .new__main__middle__center__form-group__line
+              %label 生年月日
+              %span 必須
+            .birthday-select
+              .birthday-select__year
+              %span 年
+              .birthday-select__month
+              %span 月
+              .birthday-select__day
+              %span 日
+          
+          %p.new__main__middle__center__info
+            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合があります。
+
+
+      .new__main__down
+        .new__main__down__text
+          %p.new__main__down__text__center
+        .new__main__down__submit
+          次へ進む
+
+  .footer
