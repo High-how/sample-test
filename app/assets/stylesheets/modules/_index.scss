@@ -32,7 +32,7 @@
           line-height: 48px;
           font-size: 14px;
           border: 1px solid transparent;
-          transition: all ease-out .3s;
+          /*transition: all ease-out .3s;*/
           cursor: pointer;
           text-align: center;
           &__mail{
@@ -45,12 +45,50 @@
             &__icon{
               color: #fff;
               left: 16px;
-              font-size: 16px;
+              font-size: 20px;
               position: absolute;
               i{
                 width: 20px;
                 height: 16px;
-                
+              }
+            }
+          }
+          &__facebook{
+            position: relative;
+            margin: 16px 0 0;
+            background: #385185;
+            a{
+              text-decoration: none;
+              color: #fff;
+            }
+            &__icon{
+              color: #fff;
+              left: 16px;
+              font-size: 26px;
+              position: absolute;
+              i{
+                width: 20px;
+                height: 16px;
+              }
+            }
+          }
+          &__google{
+            position: relative;
+            margin: 16px 0 0;
+            background: #fff;
+            border: #979797 solid 1px;
+            a{
+              text-decoration: none;
+              color: #333;
+            }
+            &__icon{
+              color: blue;
+              left: 16px;
+              font-size: 20px;
+              position: absolute;
+              i{
+                width: 20px;
+                height: 16px;
               }
             }
           }
