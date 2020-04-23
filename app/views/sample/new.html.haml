@@ -1,23 +1,5 @@
 .wrapper
-  .new-header
-    %h1.new-header__icon
-
-    %nav.new-header__bar
-      %ol.new-header__bar__box
-        %li.new-header__bar__box__active
-          .new-header__bar__box__active__text
-            会員情報
-          .new-header__bar__box__active__bars
-
-        %li.new-header__bar__box__active
-          .new-header__bar__box__active__text
-            電話番号認証
-          .new-header__bar__box__active__bars
-
-        %li.new-header__bar__box__active
-          .new-header__bar__box__active__text
-            完了
-          .new-header__bar__box__active__bars
+  = render partial: 'signin-header'
 
   .new
     .new__main
