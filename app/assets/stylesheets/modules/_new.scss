@@ -1,0 +1,18 @@
+.new{
+  width: 100%;
+  display: block;
+  &__main{
+    width: 700px;
+    margin: 0 auto;
+    background: #fff;
+    &__top{
+      font-size: 22px;
+      padding: 32px;
+      line-height: 1.5;
+      text-align: center;
+      h2{
+        font-weight: bold;
+      }
+    }
+  }
+}
