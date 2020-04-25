@@ -31,5 +31,63 @@
               %label パスワードを表示する
             .check-mark
               %span.check-marker
-
           
+          .new__main__middle__center__form-password
+            %h3.name 本人確認
+            %p.text 安心安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまには公開されることはありません。
+
+          .new__main__middle__center__form-name
+            .new__main__middle__center__form-name__div
+              %label お名前（全角）
+              %span.form-box 必須
+            %input.family_name{:name => "family_name_kanji", :placeholder => "例） 山田", :type => "text", :value => ""}
+            %input.family_name{:name => "first_name_kanji", :placeholder => "例） 太郎", :type => "text", :value => ""}
+
+          .new__main__middle__center__form-name
+            .new__main__middle__center__form-name__div
+              %label お名前（カナ）
+              %span.form-box 必須
+            %input.family_name{:name => "family_name_kana", :placeholder => "例） ヤマダ", :type => "text", :value => ""}
+            %input.family_name{:name => "first_name_kana", :placeholder => "例） タロウ", :type => "text", :value => ""}
+
+          .new__main__middle__center__form-birth
+            %label 生年月日
+            %span.form-box 必須
+            .select
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                %select.select__wrap__default{:name => "year"}
+                  %option{:value => "0"}  --
+              %span.select__span 年
+
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                %select.select__wrap__default{:name => "month"}
+                  %option{:value => "0"}  --
+                  %option{:value => "1"}  1
+                  %option{:value => "2"}  2
+                  %option{:value => "3"}  3
+                  %option{:value => "4"}  4
+                  %option{:value => "5"}  5
+                  %option{:value => "6"}  6
+                  %option{:value => "7"}  7
+                  %option{:value => "8"}  8
+                  %option{:value => "9"}  9
+                  %option{:value => "10"}  10
+                  %option{:value => "11"}  11
+                  %option{:value => "12"}  12
+              %span.select__span 月
+
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                %select.select__wrap__default{:name => "day"}
+                  %option{:value => "0"}  --
+              %span.select__span 日
+
+          %p.new__main__middle__center__form-info
+            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合があります。
+
+              
