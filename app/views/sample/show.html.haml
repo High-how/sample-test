@@ -29,12 +29,21 @@
 
       .login-main__center__login
         .login-main__center__login__box
-          .login-main__center__login__box__default
-            %input.login-main__center__login__box__default__form{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}
-              .login-main__center__login__box__default__form__text
+          %input.login-main__center__login__box__form{:name => "email", :placeholder => "メールアドレス", :type => "email", :value => ""}
+            .login-main__center__login__box__form__text
+        
+        .login-main__center__login__boxs
+          %input.login-main__center__login__boxs__form{:name => "password", :placeholder => "パスワード", :type => "password", :value => ""}
 
-            %input.login-main__center__login__box__default__form{:name => "password", :placeholder => "パスワード", :type => "password", :value => ""}
+        .login-main__center__login__boxs
+          .login-main__center__login__boxs__sign
+            .login-main__center__login__boxs__sign__iframe
 
-            %button.login-main__center__login__box__default__submit{:type => "submit"} ログイン
+        .login-main__center__login__boxs
+          %button.login-main__center__login__boxs__submit{:type => "submit"} ログイン
+
+        .login-main__center__login__less
+          = link_to "#" do
+            パスワードをお忘れの方
 
   = render partial: 'login-footer'
