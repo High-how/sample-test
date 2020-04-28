@@ -49,6 +49,14 @@
             line-height: 1.5;
             font-size: 16px;
           }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
+          }
         }
         &__form-groups{
           margin-top: 32px;
@@ -78,6 +86,14 @@
             background: #fff;
             line-height: 1.5;
             font-size: 16px;
+          }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
           }
         }
         &__form-password{
@@ -115,6 +131,14 @@
           .form-info{
             color: #888;
             font-size: 14px;
+          }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
           }
           .check-box{
             margin: 16px 0 0;
@@ -207,6 +231,14 @@
             line-height: 1.5;
             font-size: 16px;
           }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
+          }
         }
         &__form-birth{
           margin-top: 32px;
@@ -259,6 +291,14 @@
             }
             &__span{
               margin: 0 2px;
+            }
+          }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
             }
           }
         }

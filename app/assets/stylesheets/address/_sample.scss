@@ -52,6 +52,14 @@
             line-height: 1.5;
             font-size: 16px;
           }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
+          }
         }
         &__form-groups{
           margin-top: 32px;
@@ -91,6 +99,14 @@
             line-height: 1.5;
             font-size: 16px;
           }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
+            }
+          }
           .select{
             width: 100%;
             &__wrap{
@@ -122,6 +138,14 @@
                 cursor: pointer;
                 -webkit-appearance: none;
               }
+            }
+          }
+          .error-text{
+            color: #3CCACE;
+            line-height: 1.5;
+            font-size: 14px;
+            li{
+              margin: 8px 0 0;
             }
           }
         }

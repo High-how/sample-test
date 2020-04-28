@@ -60,20 +60,20 @@
   z-index: 10;
 }
 
-.end .progress__bars{
+.address-end .progress__bars{
   width: 0px;
 }
 
-#through{
+#address-through{
   color: grey;
 }
 
-#active{
+#address-active{
   color: #3CCACE;
   .progress{
     background: #3CCACE;
   }
 }
-#through .progress__bars{
+#address-through .progress__bars{
   background: #3CCACE;
  }
