@@ -1,4 +1,4 @@
-.new-header{
+.address-header{
   height: 128px;
   text-align: center;
   display: block;
@@ -60,14 +60,20 @@
   z-index: 10;
 }
 
-.end .progress__bars{
+.address-end .progress__bars{
   width: 0px;
 }
 
-#through{
+#address-through{
+  color: grey;
+}
+
+#address-active{
   color: #3CCACE;
   .progress{
     background: #3CCACE;
   }
 }
-
+#address-through .progress__bars{
+  background: #3CCACE;
+ }

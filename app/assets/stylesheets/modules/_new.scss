@@ -1,3 +1,41 @@
+@mixin label{
+  font-weight: 600;
+  display: inline-block;
+  font-size: 14px;
+}
+
+@mixin form-box{
+  background: #3CCACE;
+  margin: 0 0 0 8px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+}
+
+@mixin form-etc{
+  width: 100%;
+  margin: 8px 0 0;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+@mixin error-text{
+  color: #3CCACE;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+@mixin form{
+  margin-top: 32px;
+  width: 100%;
+}
+
 .new{
   width: 100%;
   display: block;
@@ -25,88 +63,50 @@
           width: 100%;
           height: 70px;
           label{
-            font-weight: 600;
-            display: inline-block;
-            font-size: 14px;
+            @include label;
           }
           .form-box{
-            background: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 3px 5px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-            /*vertical-align: top;*/
+            @include form-box;
           }
           .form-nick{
-            width: 100%;
-            margin: 8px 0 0;
-            height: 48px;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
+            @include form-etc;
+          }
+          .error-text{
+            @include error-text;
+            li{
+              margin: 8px 0 0;
+            }
           }
         }
         &__form-groups{
-          margin-top: 32px;
-          width: 100%;
+          @include form;
           height: 70px;
           label{
-            font-weight: 600;
-            display: inline-block;
-            font-size: 14px;
+            @include label;
           }
           .form-box{
-            background: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 3px 5px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-            /*vertical-align: top;*/
+            @include form-box;
           }
           .form-mail{
-            width: 100%;
-            margin: 8px 0 0;
-            height: 48px;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
+            @include form-etc;
+          }
+          .error-text{
+            @include error-text;
+            li{
+              margin: 8px 0 0;
+            }
           }
         }
         &__form-password{
-          margin-top: 32px;
-          width: 100%;
+          @include form;
           label{
-            font-weight: 600;
-            display: inline-block;
-            font-size: 14px;
+            @include label;
           }
           .form-box{
-            background: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 3px 5px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-            /*vertical-align: top;*/
+            @include form-box;
           }
           .form-pass{
-            width: 100%;
-            margin: 8px 0 0;
-            height: 48px;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
+            @include form-etc;
           }
           p{
             margin: 8px 0 0;
@@ -115,6 +115,12 @@
           .form-info{
             color: #888;
             font-size: 14px;
+          }
+          .error-text{
+            @include error-text;
+            li{
+              margin: 8px 0 0;
+            }
           }
           .check-box{
             margin: 16px 0 0;
@@ -176,24 +182,15 @@
           }
         }
         &__form-name{
-          margin-top: 32px;
-          width: 100%;
+          @include form;
           height: 70px;
           &__div{
             width: 100%;
             label{
-              font-weight: 600;
-              display: inline-block;
-              font-size: 14px;
+              @include label;
             }
             .form-box{
-              background: #3CCACE;
-              margin: 0 0 0 8px;
-              padding: 3px 5px;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 12px;
-              /*vertical-align: top;*/
+              @include form-box;
             }
           }
           .family_name{
@@ -207,23 +204,20 @@
             line-height: 1.5;
             font-size: 16px;
           }
+          .error-text{
+            @include error-text;
+            li{
+              margin: 8px 0 0;
+            }
+          }
         }
         &__form-birth{
-          margin-top: 32px;
-          width: 100%;
+          @include form;
           label{
-            font-weight: 600;
-            display: inline-block;
-            font-size: 14px;
+            @include label;
           }
           .form-box{
-            background: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 3px 5px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-            /*vertical-align: top;*/
+            @include form-box;
           }
           .select{
             width: 100%;
@@ -261,6 +255,12 @@
               margin: 0 2px;
             }
           }
+          .error-text{
+            @include error-text;
+            li{
+              margin: 8px 0 0;
+            }
+          }
         }
         &__form-info{
           margin: 8px 0 0;
@@ -284,12 +284,11 @@
           }
         }
         &__btn{
-          margin-top: 32px;
+          @include form;
           background: #3CCACE;
           border: 1px solid #3CCACE;
           color: #fff;
           display: block;
-          width: 100%;
           line-height: 48px;
           font-size: 14px;
           cursor: pointer;

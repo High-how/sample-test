@@ -1,9 +1,28 @@
+@mixin a{
+  text-decoration: none;
+  color: #fff;
+}
+
+@mixin i{
+  width: 20px;
+  height: 16px;
+}
+
+@mixin icon{
+  left: 16px;
+  font-size: 26px;
+  position: absolute;
+}
+
+@mixin FaceGoo{
+  position: relative;
+  margin: 16px 0 0;
+}
+
 .main{
   display: block;
   background-color: #f5f5f5;
   width: 100%;
-  height: 384px;
-  /*padding-top: 128px;*/
   &__center{
     width: 700px;
     height: 100%;
@@ -20,7 +39,6 @@
       padding: 40px 40px 64px;
       border-top: 1px solid #f5f5f5;
       width: 100%;
-      height: 287px;
       &__centerbox{
         max-width: 343px;
         height: 182px;
@@ -32,49 +50,38 @@
           line-height: 48px;
           font-size: 14px;
           border: 1px solid transparent;
-          /*transition: all ease-out .3s;*/
           cursor: pointer;
           text-align: center;
           &__mail{
             background-color: #3CCACE;
             position: relative;
             a{
-              text-decoration: none;
-              color: #fff;
+              @include a;
             }
             &__icon{
               color: #fff;
-              left: 16px;
-              font-size: 20px;
-              position: absolute;
+              @include icon;
               i{
-                width: 20px;
-                height: 16px;
+                @include i;
               }
             }
           }
           &__facebook{
-            position: relative;
-            margin: 16px 0 0;
+            @include FaceGoo;
             background: #385185;
             a{
-              text-decoration: none;
-              color: #fff;
+              @include a;
             }
             &__icon{
               color: #fff;
-              left: 16px;
-              font-size: 26px;
-              position: absolute;
+              @include icon;
               i{
-                width: 20px;
-                height: 16px;
+                @include i;
               }
             }
           }
           &__google{
-            position: relative;
-            margin: 16px 0 0;
+            @include FaceGoo;
             background: #fff;
             border: #979797 solid 1px;
             a{
@@ -83,12 +90,9 @@
             }
             &__icon{
               color: blue;
-              left: 16px;
-              font-size: 20px;
-              position: absolute;
+              @include icon;
               i{
-                width: 20px;
-                height: 16px;
+                @include i;
               }
             }
           }

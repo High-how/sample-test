@@ -7,4 +7,7 @@ class SampleController < ApplicationController
 
   def show
   end
+
+  def sample
+  end
 end
