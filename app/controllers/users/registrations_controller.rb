@@ -22,6 +22,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
     render :new_address
   end
 
+  def create_address
+    @user = User.new(session["devise.regist_data"]["user"])
+    @address = Address.new(address_params)
+    unless @address.valid?
+      flash.now[:alert] = @address.errors.full_messages
+      render :new_address and return
+    end
+    @user.build_address(@address.attributes)
+    @user.save
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+  end
+
+  protected
+
+  def address_params
+    params.require(:address).permit(:family_name, :first_name, :family_name_reading, :first_name_reading, :postal_code, :prefecture, :city, :address)
+  end
+
   # GET /resource/edit
   # def edit
   #   super
@@ -45,25 +64,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def cancel
   #   super
   # end
-
-  def create_address
-    @user = User.new(session["devise.regist_data"]["user"])
-    @address = Address.new(address_params)
-    unless @address.valid?
-      flash.now[:alert] = @address.errors.full_messages
-      render :new_address and return
-    end
-    @user.build_address(@address.attributes)
-    @user.save
-    session["devise.regist_data"]["user"].clear
-    sign_in(:user, @user)
-  end
-
-  protected
-
-  def address_params
-    params.require(:address).permit(:family_name, :first_name, :family_name_reading, :first_name_reading, :postal_code, :prefecture, :city, :address)
-  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params

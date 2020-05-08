@@ -6,7 +6,8 @@
         %h2 会員情報入力
         
       #new__main__middle.new__main__middle
-        = form_with model: @user, url: user_registration_path, id: "form_with" do |f|
+        = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+          = render "devise/shared/error_messages", resource: @user
           #new__main__middle__center.new__main__middle__center
           
             .new__main__middle__center__form-group

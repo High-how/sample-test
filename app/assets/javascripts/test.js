@@ -26,7 +26,7 @@ $(document).on('turbolinks:load', function () {
   $.each(methods, function (key) {
     $.validator.addMethod(key, this);
   });
-  $("#form_with").validate({
+  $("#new_user").validate({
     rules : {
       "user[nickname]": {
         required: true
