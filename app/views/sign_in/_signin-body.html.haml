@@ -1,0 +1,106 @@
+.new
+  .new__main
+    .new__main__top
+      %h2 会員情報入力
+      
+    #new__main__middle.new__main__middle
+      = form_with model: @user do |f|
+        .new__main__middle__center
+        
+          .new__main__middle__center__form-group
+            =f.label :nickname, "ニックネーム"
+            %span.form-box 必須
+            = f.text_field :nickname, class: "form-nick", placeholder: "例） フリマ次郎", id: "nickname"
+            %ul.error-text
+              %li#error.error
+
+          .new__main__middle__center__form-groups
+            = f.label :email, "メールアドレス"
+            %span.form-box 必須
+            = f.email_field :email, class: "form-mail", placeholder: "PC・携帯どちらでも可", id: "email"
+            %ul.error-text
+              %li#error.error
+
+          .new__main__middle__center__form-password
+            = f.label :encrypted_password, "パスワード"
+            %span.form-box 必須
+            = f.password_field :encrypted_password, class:"form-pass", placeholder: "7文字以上の半角英数", id: "password"
+            %p.form-info ※英字と数字の両方を含めて設定してください。
+            %ul.error-text
+              %li#error.error
+
+          .new__main__middle__center__form-password
+            = f.label :password_confirmation, "パスワード(確認)"
+            %span.form-box 必須
+            = f.password_field :password_confirmation, class: "form-pass", placeholder: "7文字以上の半角英数", id: "password_confirmation"
+            %ul.error-text
+              %li#error.error
+
+            .check-box
+              = f.check_box :check, class: "check-pass", id: "check"
+              %i.icon
+              = f.label :check, "パスワードを表示する"
+            .check-mark
+              %span.check-marker
+          
+          .new__main__middle__center__form-password
+            %h3.name 本人確認
+            %p.text 安心安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまには公開されることはありません。
+
+          .new__main__middle__center__form-name
+            .new__main__middle__center__form-name__div
+              = f.label :name_kanji, "お名前（全角）"
+              %span.form-box 必須
+            = f.text_field :family_name, class: "family_name", placeholder: "例） 山田", id: "family_name_kanji"
+            = f.text_field :first_name, class: "family_name", placeholder: "例） 太郎", id: "first_name_kanji"
+            %ul.error-text
+              %li#error.error
+              %li#error.error
+
+          .new__main__middle__center__form-name
+            .new__main__middle__center__form-name__div
+              = f.label :name_kana,"お名前（カナ）"
+              %span.form-box 必須
+            = f.text_field :family_name_reading, class: "family_name", placeholder: "例） ヤマダ", id: "family_name_kana"
+            = f.text_field :first_name_reading, class: "family_name", placeholder: "例） タロウ", id: "first_name_kana"
+            %ul.error-text
+              %li#error.error
+
+          .new__main__middle__center__form-birth
+            = f.label :birth, "生年月日"
+            %span.form-box 必須
+            .select
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                = f.select :birth_year, [["--", 0]], class: "select__wrap__default", id: "year"
+              %span.select__span 年
+
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                = f.select :birth_month, [["--", 0]], class:"select__wrap__default", id: "month"
+              %span.select__span 月
+
+              .select__wrap
+                .select__wrap__icon
+                  = icon('fas', 'angle-down')
+                = f.select :birth_day, [["--", 0]], class:"select__wrap__default", id: "day"
+              %span.select__span 日
+            %ul.error-text
+              %li#error.error
+
+          %p.new__main__middle__center__form-info
+            ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間をいただく場合があります。
+
+        .new__main__middle__down
+          .new__main__middle__down__btn-box
+            %p.text 「次へ進む」のボタンを押すことにより、利用規約に同意したものとみなします
+
+          = f.submit '次へ進む', class:"new__main__middle__down__btn", url: "root_path"
+          .text-right
+            =link_to "#" do
+              本人情報の登録について＞
+          
+          .gray-box
+            %p.gray-box__english This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.

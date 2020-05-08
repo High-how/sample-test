@@ -23,7 +23,7 @@
         &__form-name{
           margin-top: 32px;
           width: 100%;
-          height: 70px;
+          /*height: 70px;*/
           &__div{
             width: 100%;
             label{
@@ -52,19 +52,17 @@
             line-height: 1.5;
             font-size: 16px;
           }
-          .error-text{
-            color: #3CCACE;
-            line-height: 1.5;
-            font-size: 14px;
-            li{
-              margin: 8px 0 0;
-            }
+          input.invalid { // バリデーションNGの場合に枠線を赤色に変更
+            border: #ea352d 1px solid;
+          }
+          input.valid {
+            border: #3CCACE 1px solid; // バリデーションokの場合に枠線を緑色に変更
           }
         }
         &__form-groups{
           margin-top: 32px;
           width: 100%;
-          height: 70px;
+          /*height: 70px;*/
           label{
             font-weight: 600;
             display: inline-block;
@@ -99,13 +97,11 @@
             line-height: 1.5;
             font-size: 16px;
           }
-          .error-text{
-            color: #3CCACE;
-            line-height: 1.5;
-            font-size: 14px;
-            li{
-              margin: 8px 0 0;
-            }
+          input.invalid { // バリデーションNGの場合に枠線を赤色に変更
+            border: #ea352d 1px solid;
+          }
+          input.valid {
+            border: #3CCACE 1px solid; // バリデーションokの場合に枠線を緑色に変更
           }
           .select{
             width: 100%;
@@ -122,6 +118,27 @@
                 z-index: 2;
                 color: #888;
                 font-size: 25px;
+              }
+              select::-ms-expand {
+                display: none;
+              }
+              select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 0 10px;
+                border-color: #3CCACE;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+                height: 48px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                background: 0;
+                font-size: 16px;
+                line-height: 1.5;
+                cursor: pointer;
+                -webkit-appearance: none;
               }
               &__default{
                 padding: 0 10px;
@@ -140,13 +157,11 @@
               }
             }
           }
-          .error-text{
-            color: #3CCACE;
-            line-height: 1.5;
-            font-size: 14px;
-            li{
-              margin: 8px 0 0;
-            }
+          input.invalid { // バリデーションNGの場合に枠線を赤色に変更
+            border: #ea352d 1px solid;
+          }
+          input.valid {
+            border: #3CCACE 1px solid; // バリデーションokの場合に枠線を緑色に変更
           }
         }
       }
@@ -169,3 +184,20 @@
     }
   }
 }
+
+#family_name-error, #first_name-error, #family_name_reading-error, #first_name_reading-error, #postal_code-error, #prefecture-error, #city-error, #address-error{
+color: #ea352d;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-top: 8px;
+  list-style: none;
+}
+// 入力欄をクリック時に枠線を水色に変更
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+  outline: none;
+  border-color: #0098E8;
+}
+
+

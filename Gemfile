@@ -66,3 +66,5 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
+gem 'devise'
